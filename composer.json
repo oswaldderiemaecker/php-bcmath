@@ -3,7 +3,7 @@
     "description": "Wraps bcmath functions into object",
     "type" : "library",
     "license" : "MIT",
-    "keywords" : "bcmath, mathematics, binary calculator",
+    "keywords" : ["bcmath", "mathematics", "binary calculator"],
     "authors" : [{
         "name" : "Vaidas Lažauskas", "email" : "vaidas@notrix.lt"
     }],
