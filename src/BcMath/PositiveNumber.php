@@ -16,7 +16,7 @@ class BcMath_PositiveNumber extends BcMath_Number
      */
     public function isValid($number)
     {
-        return (boolean) preg_match('/^\d+$/', $number);
+        return (boolean) preg_match('/^\d+(\.\d+)?$/', $number);
     }
 
     /**

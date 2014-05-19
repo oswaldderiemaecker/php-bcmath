@@ -68,7 +68,7 @@ class BcMath
      * @param BcMath_Number|string $leftOperand
      * @param BcMath_Number|string $rightOperand
      *
-     * @return BcMath_Number The sum of the two operands, as a string.
+     * @return string The sum of the two operands, as a string.
      */
     public function addition($leftOperand, $rightOperand)
     {
@@ -87,7 +87,7 @@ class BcMath
      * @param BcMath_Number|string $leftOperand
      * @param BcMath_Number|string $rightOperand
      *
-     * @return BcMath_Number The result of the subtraction, as a string.
+     * @return string The result of the subtraction, as a string.
      */
     public function subtraction($leftOperand, $rightOperand)
     {

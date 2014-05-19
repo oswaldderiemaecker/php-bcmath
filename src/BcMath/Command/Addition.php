@@ -30,5 +30,4 @@ class BcMath_Command_Addition implements BcMatc_Command_CommandInterface
             $command($left->getValue(), $right->getValue(), $scale->getValue())
         );
     }
-
 }

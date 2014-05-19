@@ -30,5 +30,4 @@ class BcMath_Command_Comparison implements BcMatc_Command_CommandInterface
             $command($left->getValue(), $right->getValue(), $scale->getValue())
         );
     }
-
 }
