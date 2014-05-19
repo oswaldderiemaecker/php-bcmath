@@ -13,6 +13,11 @@
         ]
     },
     "require": {
-        "php": ">=4.0.4"
+        "php": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
     }
 }
