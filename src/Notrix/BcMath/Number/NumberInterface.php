@@ -1,18 +1,20 @@
 <?php
 
+namespace Notrix\BcMath\Number;
+
 /**
  * BcMath number interface
  *
  * @author Vaidas Lažauskas <vaidas@notrix.lt>
  */
-interface BcMath_NumberInterface
+interface NumberInterface
 {
     /**
      * Setter of Value
      *
      * @param string $value
      *
-     * @return self
+     * @return static
      */
     public function setValue($value);
 
@@ -35,9 +37,9 @@ interface BcMath_NumberInterface
     /**
      * Created bcmath number
      *
-     * @param BcMath_NumberInterface|string $value
+     * @param NumberInterface|string $value
      *
-     * @return self
+     * @return static
      */
     public static function create($value = null);
 }

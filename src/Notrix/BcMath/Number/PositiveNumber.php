@@ -1,11 +1,13 @@
 <?php
 
+namespace Notrix\BcMath\Number;
+
 /**
  * BcMath positive number
  *
  * @author Vaidas Lažauskas <vaidas@notrix.lt>
  */
-class BcMath_PositiveNumber extends BcMath_Number
+class PositiveNumber extends Number
 {
     /**
      * Checks if number is positive
@@ -22,15 +24,16 @@ class BcMath_PositiveNumber extends BcMath_Number
     /**
      * Created positive number
      *
-     * @param BcMath_NumberInterface|string $value
+     * @param NumberInterface|string $value
      *
-     * @return BcMath_PositiveNumber
+     * @return static
      */
     public static function create($value = null)
     {
-        if ($value instanceof BcMath_NumberInterface) {
+        if ($value instanceof NumberInterface) {
             $value = $value->getValue();
         }
+
         return new self($value);
     }
 }

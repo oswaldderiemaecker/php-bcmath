@@ -1,14 +1,15 @@
 <?php
 
-require_once __DIR__ . '/NumberInterface.php';
-require_once __DIR__ . '/Exception/NumberException.php';
+namespace Notrix\BcMath\Number;
+
+use Notrix\BcMath\Exception;
 
 /**
  * BcMath number
  *
  * @author Vaidas Lažauskas <vaidas@notrix.lt>
  */
-class BcMath_Number implements BcMath_NumberInterface
+class Number implements NumberInterface
 {
     /**
      * @var string
@@ -30,16 +31,17 @@ class BcMath_Number implements BcMath_NumberInterface
      *
      * @param string $value
      *
-     * @return BcMath_Number
+     * @return static
      *
-     * @throws BcMath_Exception_NumberException
+     * @throws Exception\NumberException
      */
     public function setValue($value)
     {
         if (!$this->isValid($value)) {
-            throw new BcMath_Exception_NumberException('Wrong number format');
+            throw new Exception\NumberException('Wrong number format');
         }
         $this->value = $value;
+
         return $this;
     }
 
@@ -68,15 +70,16 @@ class BcMath_Number implements BcMath_NumberInterface
     /**
      * Created bcmath number
      *
-     * @param BcMath_NumberInterface|string $value
+     * @param NumberInterface|string $value
      *
-     * @return BcMath_Number
+     * @return static
      */
     public static function create($value = null)
     {
-        if ($value instanceof BcMath_NumberInterface) {
+        if ($value instanceof NumberInterface) {
             $value = $value->getValue();
         }
+
         return new self($value);
     }
 }

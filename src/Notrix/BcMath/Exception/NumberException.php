@@ -1,11 +1,13 @@
 <?php
 
+namespace Notrix\BcMath\Exception;
+
 /**
  * Invalid number exception
  *
  * @author Vaidas Lažauskas <vaidas@notrix.lt>
  */
-class BcMath_Exception_NumberException extends Exception
+class NumberException extends \Exception
 {
 
 }

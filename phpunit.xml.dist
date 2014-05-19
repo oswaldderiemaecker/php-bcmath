@@ -8,14 +8,13 @@
     convertErrorsToExceptions   = "true"
     convertNoticesToExceptions  = "true"
     convertWarningsToExceptions = "true"
-    processIsolation            = "false"
-    stopOnFailure               = "false"
     strict                      = "true"
-    syntaxCheck                 = "true">
+    syntaxCheck                 = "true"
+    bootstrap                   = "tests/bootstrap.php">
 
     <testsuites>
         <testsuite name="PHP BC-Math Test Suite">
-            <directory>./tests</directory>
+            <directory>./tests/Notrix/BcMath</directory>
         </testsuite>
     </testsuites>
 </phpunit>
